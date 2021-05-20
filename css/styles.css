@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(/images/bg-header-desktop.png) no-repeat;
+  text-align: center;
+  font: 400 18px 'Bai Jamjuree', sans-serif;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 130px;
+}
+
+body header .logo {
+  -webkit-mask: url(/images/logo.svg);
+          mask: url(/images/logo.svg);
+  width: 125px;
+  height: 125px;
+  background-color: #26baa4;
+}
+
+body header h1 {
+  margin: 60px 0 0 0;
+  font-size: 44px;
+  letter-spacing: 0.2px;
+  color: #4c545d;
+}
+
+body header .description-header {
+  width: 60%;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  margin: 17px 0 50px;
+  line-height: 28px;
+  color: #9fabb2;
+}
+
+body header .downloads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 470px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header .download {
+  width: 225px;
+  height: 57px;
+  border-radius: 26px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+body header .download.ios {
+  background-color: #26baa4;
+  border-bottom: 3px solid #1a7f70;
+}
+
+body header .download.mac {
+  background-color: #6173ff;
+  border-bottom: 3px solid #2e46ff;
+}
+/*# sourceMappingURL=styles.css.map */
