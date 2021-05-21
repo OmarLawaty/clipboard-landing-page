@@ -5,15 +5,50 @@
           box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+section {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: url(/images/bg-header-desktop.png) no-repeat;
   text-align: center;
   font: 400 18px 'Bai Jamjuree', sans-serif;
 }
 
-body header {
+h1,
+h2,
+h3 {
+  color: #4c545d;
+}
+
+h2,
+h3 {
+  letter-spacing: 0.1px;
+}
+
+p {
+  letter-spacing: 0.1px;
+  color: #9fabb2;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background: url(/images/bg-header-desktop.png) no-repeat;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,10 +62,10 @@ body header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 130px;
+  padding: 130px 0 121px;
 }
 
-body header .logo {
+header .logo {
   -webkit-mask: url(/images/logo.svg);
           mask: url(/images/logo.svg);
   width: 125px;
@@ -38,15 +73,15 @@ body header .logo {
   background-color: #26baa4;
 }
 
-body header h1 {
+header h1 {
   margin: 60px 0 0 0;
   font-size: 44px;
   letter-spacing: 0.2px;
   color: #4c545d;
 }
 
-body header .description-header {
-  width: 60%;
+header .description-header {
+  width: 50%;
   font-size: 20px;
   letter-spacing: 0.2px;
   margin: 17px 0 50px;
@@ -54,7 +89,7 @@ body header .description-header {
   color: #9fabb2;
 }
 
-body header .downloads {
+header .downloads {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,24 +99,261 @@ body header .downloads {
           justify-content: space-between;
 }
 
-body header .download {
+header .download {
   width: 225px;
   height: 57px;
   border-radius: 26px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   color: white;
   border-top: none;
   border-left: none;
   border-right: none;
+  letter-spacing: 2.2px;
 }
 
-body header .download.ios {
+header .download.ios {
   background-color: #26baa4;
   border-bottom: 3px solid #1a7f70;
 }
 
-body header .download.mac {
+header .download.mac {
+  background-color: #6173ff;
+  border-bottom: 3px solid #2e46ff;
+}
+
+main h2 {
+  font-size: 35px;
+  color: #4c545d;
+}
+
+main .snippets-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .snippets-track h2 {
+  margin: 29px 0 0;
+}
+
+main .snippets-track .tracking-description {
+  width: 50%;
+  margin: 20px 0 20px;
+  line-height: 30px;
+  color: #9fabb2;
+}
+
+main .snippets-track div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  min-height: 653px;
+}
+
+main .snippets-track div .mac-photo {
+  background: url(/images/image-computer.png) no-repeat right top;
+  width: 50%;
+}
+
+main .snippets-track div .advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  margin-left: 24px;
+}
+
+main .snippets-track div .advantages div {
+  width: 70%;
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 69px;
+}
+
+main .snippets-track div .advantages div h3 {
+  font-size: 23px;
+  margin-bottom: 9px;
+}
+
+main .snippets-track div .advantages div p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 56px;
+  width: 85%;
+  min-width: 340px;
+}
+
+main .clipboard-access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .clipboard-access p {
+  width: 50%;
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+main .clipboard-access .devices {
+  margin-top: 100px;
+}
+
+main .clipboard-supercharge {
+  margin: 66px 0 3px;
+}
+
+main .clipboard-supercharge h2 {
+  margin-bottom: 23px;
+}
+
+main .clipboard-supercharge .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+}
+
+main .clipboard-supercharge .features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 26.4%;
+  margin: 0;
+  padding-top: 0;
+}
+
+main .clipboard-supercharge .features .feature .feature-img {
+  height: 40px;
+}
+
+main .clipboard-supercharge .features .feature h3 {
+  margin: 37px 0 17px;
+  font-size: 23px;
+}
+
+main .clipboard-supercharge .features .feature p {
+  font-size: 16px;
+  width: 95%;
+  line-height: 30px;
+}
+
+main .worked-with-companies {
+  height: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 77%;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .download-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .download-options h2 {
+  margin-bottom: 18px;
+}
+
+main .download-options p {
+  width: 50%;
+  line-height: 30px;
+}
+
+main .download-options .downloads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 470px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 48px;
+}
+
+main .download-options .downloads .download {
+  width: 225px;
+  height: 57px;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  letter-spacing: 2.2px;
+}
+
+main .download-options .downloads .download.ios {
+  background-color: #26baa4;
+  border-bottom: 3px solid #1a7f70;
+}
+
+main .download-options .downloads .download.mac {
   background-color: #6173ff;
   border-bottom: 3px solid #2e46ff;
 }
