@@ -45,6 +45,38 @@ img {
   height: auto;
 }
 
+.downloads {
+  display: flex;
+  width: 470px;
+  justify-content: space-between;
+  font-weight: 600;
+
+  .download {
+    width: 225px;
+    height: 57px;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    border: none;
+    border-bottom: 1px solid;
+    letter-spacing: 2.2px;
+    cursor: pointer;
+
+    &.ios {
+      box-shadow: 0px 6px 25px hsla(171, 66%, 44%, 0.6);
+      background-color: hsl(171, 66%, 44%);
+      border-color: hsl(171, 66%, 30%);
+    }
+
+    &.mac {
+      box-shadow: 0px 6px 25px hsla(233, 100%, 69%, 0.3);
+      background-color: hsl(233, 100%, 69%);
+      border-color: hsl(233, 100%, 59%);
+    }
+  }
+}
+
 header {
   background: url(/images/bg-header-desktop.png) no-repeat;
   background-size: contain;
@@ -76,35 +108,6 @@ header {
     line-height: 28px;
     color: hsl(201, 11%, 66%);
   }
-
-  .downloads {
-    display: flex;
-    width: 470px;
-    justify-content: space-between;
-  }
-
-  .download {
-    width: 225px;
-    height: 57px;
-    border-radius: 26px;
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    letter-spacing: 2.2px;
-
-    &.ios {
-      background-color: hsl(171, 66%, 44%);
-      border-bottom: 3px solid hsl(171, 66%, 30%);
-    }
-
-    &.mac {
-      background-color: hsl(233, 100%, 69%);
-      border-bottom: 3px solid hsl(233, 100%, 59%);
-    }
-  }
 }
 
 main {
@@ -117,6 +120,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 
     h2 {
       margin: 29px 0 0;
@@ -124,21 +128,25 @@ main {
 
     .tracking-description {
       width: 50%;
-
       margin: 20px 0 20px;
       line-height: 30px;
       color: hsl(201, 11%, 66%);
     }
 
-    div {
+    .snippets-features {
       display: flex;
       width: 100%;
       margin-top: 30px;
       min-height: 653px;
 
       .mac-photo {
-        background: url(/images/image-computer.png) no-repeat right top;
-        width: 50%;
+        display: flex;
+        align-items: center;
+        width: 52%;
+
+        img {
+          margin: -20px -30px 0;
+        }
       }
 
       .advantages {
@@ -147,15 +155,12 @@ main {
         text-align: start;
         align-items: center;
         justify-content: center;
-        width: 40%;
-        margin-left: 24px;
+        width: 38%;
 
         div {
           width: 70%;
-          height: 0;
           display: flex;
           flex-direction: column;
-          margin-top: 69px;
 
           h3 {
             font-size: 23px;
@@ -165,7 +170,6 @@ main {
           p {
             font-size: 16px;
             line-height: 30px;
-
             margin-bottom: 56px;
             width: 85%;
             min-width: 340px;
@@ -230,14 +234,14 @@ main {
     }
   }
 
-  .worked-with-companies {
-    height: 370px;
-    display: flex;
-    align-items: center;
+  .partners {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
     justify-content: space-between;
+    align-items: center;
+    gap: 50px;
     width: 77%;
-    margin: auto;
-    flex-wrap: wrap;
+    margin: 155px auto;
   }
 
   .download-options {
@@ -252,38 +256,316 @@ main {
 
     p {
       width: 50%;
-
       line-height: 30px;
+      margin-bottom: 48px;
+    }
+  }
+}
+
+footer {
+  margin-top: 148px;
+  padding: 0 95px 0;
+  width: 100%;
+  height: 25%;
+  background-color: hsla(201, 11%, 66%, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .container {
+    display: flex;
+    align-items: center;
+    width: 82%;
+    height: 100%;
+    padding-left: 16px;
+
+    .logo {
+      mask: url(/images/logo.svg);
+      width: 125px;
+      height: 125px;
+      background-color: hsl(171, 66%, 44%);
+      transform: scale(0.44);
     }
 
-    .downloads {
+    .footer-options {
+      height: 86px;
+      width: 57%;
       display: flex;
-      width: 470px;
-      justify-content: space-between;
-      margin-top: 48px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0px 0px 0 100px;
+      line-height: 43px;
+      text-align: start;
 
-      .download {
-        width: 225px;
-        height: 57px;
-        border-radius: 26px;
-        font-size: 16px;
-        font-weight: 400;
-        color: white;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        letter-spacing: 2.2px;
+      span {
+        a {
+          text-decoration: none;
+          color: hsl(210, 10%, 33%);
 
-        &.ios {
-          background-color: hsl(171, 66%, 44%);
-          border-bottom: 3px solid hsl(171, 66%, 30%);
-        }
-
-        &.mac {
-          background-color: hsl(233, 100%, 69%);
-          border-bottom: 3px solid hsl(233, 100%, 59%);
+          &:hover {
+            color: hsl(171, 66%, 44%);
+          }
         }
       }
+    }
+  }
+  .social-media {
+    width: 120px;
+    height: 50px;
+    margin-right: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      cursor: pointer;
+      &:hover {
+        background-color: hsl(171, 66%, 44%);
+      }
+    }
+
+    .facebook {
+      mask: url(/images/icon-facebook.svg);
+      background-color: hsl(210, 10%, 33%);
+      width: 25px;
+      height: 25px;
+    }
+    .twitter {
+      mask: url(/images/icon-twitter.svg);
+      background-color: hsl(210, 10%, 33%);
+      width: 25px;
+      height: 20px;
+    }
+    .instagram {
+      mask: url(/images/icon-instagram.svg);
+      background-color: hsl(210, 10%, 33%);
+      width: 25px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  main .partners {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 850px) {
+  .downloads {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .download {
+      width: 82%;
+
+      &.ios {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  header {
+    padding: 124px 0 121px;
+    background-image: url(/images/bg-header-mobile.png);
+    background-size: cover;
+    h1 {
+      width: 85%;
+      font-size: 30px;
+      letter-spacing: 0.4px;
+      margin-top: 63px;
+      line-height: 40px;
+    }
+
+    .description-header {
+      width: 84%;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
+  main {
+    h2 {
+      font-size: 27px;
+      width: 90%;
+      color: #4c545d;
+    }
+
+    .snippets-track {
+      margin-bottom: 140px;
+      h2 {
+        margin: 38px 0 0;
+      }
+
+      .tracking-description {
+        width: 80%;
+        font-size: 16px;
+        margin: 16px 0 20px;
+        line-height: 26px;
+      }
+
+      .snippets-features {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        margin-top: 47px;
+
+        .mac-photo {
+          padding: 0;
+          width: 83%;
+          margin-bottom: 52px;
+          img {
+            margin: 0;
+          }
+        }
+
+        .advantages {
+          width: 100%;
+
+          div {
+            align-items: center;
+            text-align: center;
+            width: 100%;
+
+            p {
+              min-width: unset;
+              width: 80%;
+              line-height: 27px;
+              margin-bottom: 47px;
+            }
+          }
+        }
+      }
+    }
+
+    .clipboard-access {
+      h2 {
+        text-transform: capitalize;
+      }
+
+      p {
+        width: 85%;
+        margin-top: 17px;
+        line-height: 26px;
+        font-size: 16px;
+      }
+
+      .devices {
+        width: 92%;
+        margin-top: 60px;
+      }
+    }
+
+    .clipboard-supercharge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 93px 0 3px;
+
+      h2 {
+        margin-bottom: 13px;
+      }
+      p {
+        font-size: 16px;
+        width: 90%;
+        line-height: 25px;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 90px;
+
+        .feature {
+          width: 100%;
+          h3 {
+            width: 80%;
+            margin: 42px 0 18px;
+          }
+          p {
+            font-size: 16px;
+            width: 85%;
+            line-height: 26px;
+            margin-bottom: 56px;
+          }
+          &:nth-child(2) {
+            .feature-img {
+              margin-bottom: -7px;
+            }
+          }
+        }
+      }
+    }
+
+    .partners {
+      margin: 74px auto 166px;
+      grid-template-columns: repeat(1, auto);
+      justify-content: center;
+      gap: 55px 0;
+
+      .partner {
+        max-width: 140px;
+        margin: 0 auto;
+
+        &:nth-child(2) {
+          max-width: 125px;
+        }
+
+        &:nth-child(3) {
+          max-width: 137px;
+          padding: 5px 0;
+        }
+
+        &:nth-child(4) {
+          max-width: 113px;
+        }
+
+        &:nth-child(5) {
+          max-width: 108px;
+          margin-top: -3px;
+        }
+      }
+    }
+
+    .download-options {
+      h2 {
+        width: 75%;
+      }
+      p {
+        width: 83%;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    height: 490px;
+    margin-top: 183px;
+    padding: 0;
+    justify-content: unset;
+
+    .container {
+      flex-direction: column;
+      padding: 0;
+      height: 76%;
+
+      .footer-options {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: unset;
+        width: 100%;
+        line-height: 50px;
+      }
+    }
+    .social-media {
+      margin: 23px 0 0;
+      width: 152px;
     }
   }
 }

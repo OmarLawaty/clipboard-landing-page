@@ -46,6 +46,44 @@ img {
   height: auto;
 }
 
+.downloads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 470px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+}
+
+.downloads .download {
+  width: 225px;
+  height: 57px;
+  border-radius: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-bottom: 1px solid;
+  letter-spacing: 2.2px;
+  cursor: pointer;
+}
+
+.downloads .download.ios {
+  -webkit-box-shadow: 0px 6px 25px rgba(38, 186, 164, 0.6);
+          box-shadow: 0px 6px 25px rgba(38, 186, 164, 0.6);
+  background-color: #26baa4;
+  border-color: #1a7f70;
+}
+
+.downloads .download.mac {
+  -webkit-box-shadow: 0px 6px 25px rgba(97, 115, 255, 0.3);
+          box-shadow: 0px 6px 25px rgba(97, 115, 255, 0.3);
+  background-color: #6173ff;
+  border-color: #2e46ff;
+}
+
 header {
   background: url(/images/bg-header-desktop.png) no-repeat;
   background-size: contain;
@@ -89,39 +127,6 @@ header .description-header {
   color: #9fabb2;
 }
 
-header .downloads {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 470px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header .download {
-  width: 225px;
-  height: 57px;
-  border-radius: 26px;
-  font-size: 16px;
-  font-weight: 400;
-  color: white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  letter-spacing: 2.2px;
-}
-
-header .download.ios {
-  background-color: #26baa4;
-  border-bottom: 3px solid #1a7f70;
-}
-
-header .download.mac {
-  background-color: #6173ff;
-  border-bottom: 3px solid #2e46ff;
-}
-
 main h2 {
   font-size: 35px;
   color: #4c545d;
@@ -138,6 +143,7 @@ main .snippets-track {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 100px;
 }
 
 main .snippets-track h2 {
@@ -151,7 +157,7 @@ main .snippets-track .tracking-description {
   color: #9fabb2;
 }
 
-main .snippets-track div {
+main .snippets-track .snippets-features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,12 +166,21 @@ main .snippets-track div {
   min-height: 653px;
 }
 
-main .snippets-track div .mac-photo {
-  background: url(/images/image-computer.png) no-repeat right top;
-  width: 50%;
+main .snippets-track .snippets-features .mac-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 52%;
 }
 
-main .snippets-track div .advantages {
+main .snippets-track .snippets-features .mac-photo img {
+  margin: -20px -30px 0;
+}
+
+main .snippets-track .snippets-features .advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,13 +195,11 @@ main .snippets-track div .advantages {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40%;
-  margin-left: 24px;
+  width: 38%;
 }
 
-main .snippets-track div .advantages div {
+main .snippets-track .snippets-features .advantages div {
   width: 70%;
-  height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,15 +207,14 @@ main .snippets-track div .advantages div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 69px;
 }
 
-main .snippets-track div .advantages div h3 {
+main .snippets-track .snippets-features .advantages div h3 {
   font-size: 23px;
   margin-bottom: 9px;
 }
 
-main .snippets-track div .advantages div p {
+main .snippets-track .snippets-features .advantages div p {
   font-size: 16px;
   line-height: 30px;
   margin-bottom: 56px;
@@ -282,21 +294,20 @@ main .clipboard-supercharge .features .feature p {
   line-height: 30px;
 }
 
-main .worked-with-companies {
-  height: 370px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main .partners {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
   width: 77%;
-  margin: auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin: 155px auto;
 }
 
 main .download-options {
@@ -322,39 +333,349 @@ main .download-options h2 {
 main .download-options p {
   width: 50%;
   line-height: 30px;
+  margin-bottom: 48px;
 }
 
-main .download-options .downloads {
+footer {
+  margin-top: 148px;
+  padding: 0 95px 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(159, 171, 178, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 470px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 82%;
+  height: 100%;
+  padding-left: 16px;
+}
+
+footer .container .logo {
+  -webkit-mask: url(/images/logo.svg);
+          mask: url(/images/logo.svg);
+  width: 125px;
+  height: 125px;
+  background-color: #26baa4;
+  -webkit-transform: scale(0.44);
+          transform: scale(0.44);
+}
+
+footer .container .footer-options {
+  height: 86px;
+  width: 57%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px 0px 0 100px;
+  line-height: 43px;
+  text-align: start;
+}
+
+footer .container .footer-options span a {
+  text-decoration: none;
+  color: #4c545d;
+}
+
+footer .container .footer-options span a:hover {
+  color: #26baa4;
+}
+
+footer .social-media {
+  width: 120px;
+  height: 50px;
+  margin-right: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main .download-options .downloads .download {
-  width: 225px;
-  height: 57px;
-  border-radius: 26px;
-  font-size: 16px;
-  font-weight: 400;
-  color: white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  letter-spacing: 2.2px;
+footer .social-media div {
+  cursor: pointer;
 }
 
-main .download-options .downloads .download.ios {
+footer .social-media div:hover {
   background-color: #26baa4;
-  border-bottom: 3px solid #1a7f70;
 }
 
-main .download-options .downloads .download.mac {
-  background-color: #6173ff;
-  border-bottom: 3px solid #2e46ff;
+footer .social-media .facebook {
+  -webkit-mask: url(/images/icon-facebook.svg);
+          mask: url(/images/icon-facebook.svg);
+  background-color: #4c545d;
+  width: 25px;
+  height: 25px;
+}
+
+footer .social-media .twitter {
+  -webkit-mask: url(/images/icon-twitter.svg);
+          mask: url(/images/icon-twitter.svg);
+  background-color: #4c545d;
+  width: 25px;
+  height: 20px;
+}
+
+footer .social-media .instagram {
+  -webkit-mask: url(/images/icon-instagram.svg);
+          mask: url(/images/icon-instagram.svg);
+  background-color: #4c545d;
+  width: 25px;
+  height: 24px;
+}
+
+@media (max-width: 1100px) {
+  main .partners {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 850px) {
+  .downloads {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .downloads .download {
+    width: 82%;
+  }
+  .downloads .download.ios {
+    margin-bottom: 24px;
+  }
+  header {
+    padding: 124px 0 121px;
+    background-image: url(/images/bg-header-mobile.png);
+    background-size: cover;
+  }
+  header h1 {
+    width: 85%;
+    font-size: 30px;
+    letter-spacing: 0.4px;
+    margin-top: 63px;
+    line-height: 40px;
+  }
+  header .description-header {
+    width: 84%;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  main h2 {
+    font-size: 27px;
+    width: 90%;
+    color: #4c545d;
+  }
+  main .snippets-track {
+    margin-bottom: 140px;
+  }
+  main .snippets-track h2 {
+    margin: 38px 0 0;
+  }
+  main .snippets-track .tracking-description {
+    width: 80%;
+    font-size: 16px;
+    margin: 16px 0 20px;
+    line-height: 26px;
+  }
+  main .snippets-track .snippets-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 47px;
+  }
+  main .snippets-track .snippets-features .mac-photo {
+    padding: 0;
+    width: 83%;
+    margin-bottom: 52px;
+  }
+  main .snippets-track .snippets-features .mac-photo img {
+    margin: 0;
+  }
+  main .snippets-track .snippets-features .advantages {
+    width: 100%;
+  }
+  main .snippets-track .snippets-features .advantages div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  main .snippets-track .snippets-features .advantages div p {
+    min-width: unset;
+    width: 80%;
+    line-height: 27px;
+    margin-bottom: 47px;
+  }
+  main .clipboard-access h2 {
+    text-transform: capitalize;
+  }
+  main .clipboard-access p {
+    width: 85%;
+    margin-top: 17px;
+    line-height: 26px;
+    font-size: 16px;
+  }
+  main .clipboard-access .devices {
+    width: 92%;
+    margin-top: 60px;
+  }
+  main .clipboard-supercharge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 93px 0 3px;
+  }
+  main .clipboard-supercharge h2 {
+    margin-bottom: 13px;
+  }
+  main .clipboard-supercharge p {
+    font-size: 16px;
+    width: 90%;
+    line-height: 25px;
+  }
+  main .clipboard-supercharge .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 90px;
+  }
+  main .clipboard-supercharge .features .feature {
+    width: 100%;
+  }
+  main .clipboard-supercharge .features .feature h3 {
+    width: 80%;
+    margin: 42px 0 18px;
+  }
+  main .clipboard-supercharge .features .feature p {
+    font-size: 16px;
+    width: 85%;
+    line-height: 26px;
+    margin-bottom: 56px;
+  }
+  main .clipboard-supercharge .features .feature:nth-child(2) .feature-img {
+    margin-bottom: -7px;
+  }
+  main .partners {
+    margin: 74px auto 166px;
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 55px 0;
+  }
+  main .partners .partner {
+    max-width: 140px;
+    margin: 0 auto;
+  }
+  main .partners .partner:nth-child(2) {
+    max-width: 125px;
+  }
+  main .partners .partner:nth-child(3) {
+    max-width: 137px;
+    padding: 5px 0;
+  }
+  main .partners .partner:nth-child(4) {
+    max-width: 113px;
+  }
+  main .partners .partner:nth-child(5) {
+    max-width: 108px;
+    margin-top: -3px;
+  }
+  main .download-options h2 {
+    width: 75%;
+  }
+  main .download-options p {
+    width: 83%;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 490px;
+    margin-top: 183px;
+    padding: 0;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    height: 76%;
+  }
+  footer .container .footer-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 0;
+    height: unset;
+    width: 100%;
+    line-height: 50px;
+  }
+  footer .social-media {
+    margin: 23px 0 0;
+    width: 152px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
