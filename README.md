@@ -34,6 +34,7 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 
 - Name - Omar Mohamed
 - Frontend Mentor - [@OmarMo123](https://www.frontendmentor.io/profile/OmarMo123)
+- Twitter - [@OmarLawaty](https://twitter.com/OmarLawaty)
 
 ## Acknowledgments
 
